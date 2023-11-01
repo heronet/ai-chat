@@ -6,7 +6,7 @@ type Props = {};
 
 const Chat = (props: Props) => {
   return (
-    <div className="m-4 border rounded w-lg max-w-lg max-h-[94vh] flex flex-col mx-auto relative">
+    <div className="relative border rounded min-h-full flex flex-col max-w-4xl mx-auto">
       <ChatHeader />
       <ChatText />
       <ChatInput />

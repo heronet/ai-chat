@@ -4,24 +4,32 @@ import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
 import { useContext, useEffect } from "react";
 import { MessagesContext } from "@/context/messages";
+import { PaperPlaneIcon } from "@radix-ui/react-icons";
 
 type Props = {};
 
 const ChatInput = (props: Props) => {
-  const { setMessages } = useContext(MessagesContext);
-  const { input, handleInputChange, handleSubmit, messages } = useChat({
-    initialMessages: [
-      {
-        content: "Hail, thou whose presence hath graced this stage with words.",
-        role: "assistant",
-        id: "35adde2b-74c8-4b48-833b-7d777866c0ad",
-      },
-    ],
-  });
+  const { setMessages, setIsLoading } = useContext(MessagesContext);
+
+  const { input, handleInputChange, handleSubmit, messages, isLoading } =
+    useChat({
+      initialMessages: [
+        {
+          content:
+            "Greetings, fair soul! I bid thee a warm hello and extend my well wishes upon thy path.            .",
+          role: "assistant",
+          id: "35adde2b-74c8-4b48-833b-7d777866c0ad",
+        },
+      ],
+    });
 
   useEffect(() => {
     setMessages(messages);
   }, [JSON.stringify(messages)]);
+
+  useEffect(() => {
+    setIsLoading(isLoading);
+  }, [isLoading]);
 
   return (
     <form className="flex gap-3 px-2 py-4 items-center" onSubmit={handleSubmit}>
@@ -31,7 +39,9 @@ const ChatInput = (props: Props) => {
         value={input}
         onChange={handleInputChange}
       />
-      <Button>Send</Button>
+      <Button>
+        <PaperPlaneIcon></PaperPlaneIcon>
+      </Button>
     </form>
   );
 };
