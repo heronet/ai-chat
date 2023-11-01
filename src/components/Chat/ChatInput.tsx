@@ -5,6 +5,7 @@ import { Textarea } from "../ui/textarea";
 import { useContext, useEffect } from "react";
 import { MessagesContext } from "@/context/messages";
 import { PaperPlaneIcon } from "@radix-ui/react-icons";
+import { Input } from "../ui/input";
 
 type Props = {};
 
@@ -33,7 +34,7 @@ const ChatInput = (props: Props) => {
 
   return (
     <form className="flex gap-3 px-2 py-4 items-center" onSubmit={handleSubmit}>
-      <Textarea
+      <Input
         className="flex-1 rounded border focus:ring-1 px-2"
         placeholder="Type a message..."
         value={input}

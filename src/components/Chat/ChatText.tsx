@@ -15,13 +15,12 @@ const ChatText = () => {
           key={message.id}
           className={cn(
             message.role === "assistant" ? "" : "self-end",
-            "border rounded max-w-[85%] px-2 py-1  mx-2 z-10 bg-background text-sm md:text-base"
+            "max-w-[85%] z-10 bg-background text-sm md:text-base"
           )}
         >
-          {message.content.split("\n").map((line: string, index: number) => {
-            if (line === "") return <p key={index}>&nbsp;</p>;
-            return <p key={index}>{line}</p>;
-          })}
+          <p className="max-w-max border rounded whitespace-pre-wrap px-2 py-1 mx-2">
+            {message.content}
+          </p>
         </div>
       ))}
     </div>
