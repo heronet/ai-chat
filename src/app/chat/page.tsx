@@ -1,10 +1,10 @@
-import Chat from "@/components/Chat";
+import Chat from "@/components/Chat/Chat";
 
 type Props = {};
 
 const ChatPage = (props: Props) => {
   return (
-    <div className="p-4 h-full">
+    <div className="md:p-4 p-2 h-full">
       <Chat />
     </div>
   );

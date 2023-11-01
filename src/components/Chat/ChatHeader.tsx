@@ -2,7 +2,7 @@
 
 import { MessagesContext } from "@/context/messages";
 import { useContext } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 type Props = {};
 
@@ -13,7 +13,7 @@ const ChatHeader = (props: Props) => {
     <div className="flex border-b items-center">
       <Avatar className="mx-3">
         <AvatarImage src="/img/william-shakespeare.jpg" />
-        <AvatarFallback>CN</AvatarFallback>
+        <AvatarFallback>SP</AvatarFallback>
       </Avatar>
 
       <div className="w-full my-3 mx-1 flex flex-col">
