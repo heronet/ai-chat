@@ -9,6 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Shakespeare AI",
   description: "Talk to Shakespeare with this AI",
+  metadataBase: new URL("https://skpr.online"),
+  openGraph: {
+    images: "/img/william-shakespeare.jpg",
+  },
 };
 
 export default function RootLayout({
