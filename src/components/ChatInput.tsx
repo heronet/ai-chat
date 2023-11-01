@@ -16,7 +16,7 @@ const ChatInput = (props: Props) => {
       initialMessages: [
         {
           content:
-            "Greetings, fair soul! I bid thee a warm hello and extend my well wishes upon thy path.            .",
+            "Greetings, fair soul! I bid thee a warm hello and extend my well wishes upon thy path.",
           role: "assistant",
           id: "35adde2b-74c8-4b48-833b-7d777866c0ad",
         },
@@ -39,7 +39,7 @@ const ChatInput = (props: Props) => {
         value={input}
         onChange={handleInputChange}
       />
-      <Button>
+      <Button disabled={isLoading}>
         <PaperPlaneIcon></PaperPlaneIcon>
       </Button>
     </form>
