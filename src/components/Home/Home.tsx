@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 const Home = () => {
   return (
-    <main className="flex flex-col w-full min-h-full items-center gap-5 py-20 bg-gradient-to-b from-zinc-900 via-slate-800 to-zinc-900 overflow-y-auto">
+    <main className="flex flex-col w-full min-h-full items-center gap-5 py-20 overflow-y-auto">
       <div className="flex w-40 h-40 relative ">
         <Image
           className="rounded-full"
@@ -24,10 +24,6 @@ const Home = () => {
           sir or lady! I entreat thee to partake in a delightful conversation.
           Pray, join me in a chat of wondrous words and thoughtful discourse.
           <br />
-          <br />
-          Together, let us unravel the mysteries that lie betwixt our minds and
-          exchange ideas like gifts of gold. Shall we converse and discover what
-          tales our words may unfold?
         </p>
       </div>
       <Link href={"/chat"}>
