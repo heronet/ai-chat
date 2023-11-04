@@ -8,7 +8,8 @@ const openai = new OpenAI({
 export const runtime = "edge";
 
 export async function POST(req: Request) {
-  const { messages } = await req.json();
+  let { messages } = await req.json();
+  messages = messages.slice(-6);
   const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",
     stream: true,

@@ -3,13 +3,21 @@
 import { MessagesContext } from "@/context/messages";
 import { cn } from "@/lib/utils";
 import { Message } from "ai/react";
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 
 const ChatText = () => {
   const { messages } = useContext(MessagesContext);
+  const divRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (divRef.current) divRef.current.scrollTop = divRef.current.scrollHeight;
+  }, [messages]);
 
   return (
-    <div className="flex flex-col flex-1 py-3 h-full relative gap-2 overflow-y-auto ">
+    <div
+      className="flex flex-col flex-1 py-3 h-full relative gap-2 overflow-y-auto "
+      ref={divRef}
+    >
       {messages.map((message: Message) => (
         <div
           key={message.id}

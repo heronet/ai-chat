@@ -19,7 +19,7 @@ const Home = () => {
           I am
           <span className=" text-cyan-500"> William Shakespeare</span>
         </p>
-        <p className=" md:text-xl text-md text-center italic text-blue-100">
+        <p className="max-w-prose md:text-xl text-md text-center text-blue-100 italic">
           I bid thee to partake in merry conversation. Hail and well met, good
           sir or lady! I entreat thee to partake in a delightful conversation.
           Pray, join me in a chat of wondrous words and thoughtful discourse.
