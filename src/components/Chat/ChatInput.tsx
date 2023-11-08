@@ -1,7 +1,6 @@
 "use client";
 import { useChat } from "ai/react";
 import { Button } from "../ui/button";
-import { Textarea } from "../ui/textarea";
 import { useContext, useEffect } from "react";
 import { MessagesContext } from "@/context/messages";
 import { PaperPlaneIcon } from "@radix-ui/react-icons";
